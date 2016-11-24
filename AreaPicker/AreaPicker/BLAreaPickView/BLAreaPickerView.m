@@ -244,12 +244,15 @@ typedef enum : NSUInteger {
     switch (component) {
         case BLComponentTypeProvince:{
             _provinceSelectedRow = row;
+            _citySelectedRow = 0;
+            _areaSelectedRow = 0;
             [pickerView selectRow:0 inComponent:1 animated:NO];
             [pickerView selectRow:0 inComponent:2 animated:NO];
             break;
         }
         case BLComponentTypeCity:{
             _citySelectedRow = row;
+            _areaSelectedRow = 0;
             [pickerView selectRow:0 inComponent:2 animated:NO];
             break;
         }
